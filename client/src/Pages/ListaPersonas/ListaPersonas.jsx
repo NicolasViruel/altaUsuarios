@@ -54,8 +54,8 @@ const ListaPersonas = () => {
   return (
     <>
       <h1 className="text-center">Mis Usuarios</h1>
-      <div className="row">
-        <div className="col-md-8">
+      <div className="row mx-2">
+        <div className="text-center col-xl-8 col-xs-12">
           <Table
             striped
             bordered
@@ -117,7 +117,7 @@ const ListaPersonas = () => {
           </div>
         </div>
       </div>
-      <Button onClick={() => navigate(`/`)}>Volver atras</Button>
+      <Button className="mx-4" onClick={() => navigate(`/`)}>Volver atras</Button>
     </>
   );
 };
