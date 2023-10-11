@@ -40,9 +40,13 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { calcularEdad } from '../../utils/CalcularFecha';
+import 'chart.js/auto';
 
 const Grafica = ({ usuarios }) => {
   // Calcula las edades a partir de las fechas de nacimiento de los usuarios
+  if (!usuarios) {
+    return <div>Cargando usuarios...</div>;
+  }
   const edades = usuarios.map((usuario) => calcularEdad(usuario.fechaNacimiento));
 
   // Contar las personas en cada rango de edad
